@@ -399,102 +399,102 @@ void loop(){
             // Web Page Heading
             client.println("<body><h1>Emisores de Radio</h1>");
             
-            // Display current state, and ON/OFF buttons for GPIO 26  
+            // Display current state, and ON/OFF buttons  
             
             client.println("<CENTER> <TABLE CELLPADDING=20 CELLSPACING=20> <TR> <TD>");
             
             client.println("<CENTER> </p> <strong>" + nomRadio1 + "</strong> Estat Actual: " + radio1 + "</p> </CENTER>");
             client.println("<CENTER> <input type='image' src='https://www.rac105.cat/assets/uploads/2017/11/logo-rac105.png' width='128' height='128'/> </CENTER>");
 
-            // If the output26State is off, it displays the ON button       
+            // If the radio is off, it displays the ON button       
             if (radio1=="off") {
               client.println("<CENTER> <p><a href=\"/radio1/on\"><button class=\"button\">ON</button></a></p> </CENTER>");
             } else {
               client.println("<CENTER> <p><a href=\"/radio1/off\"><button class=\"button button2\">OFF</button></a></p> </CENTER>");
             } 
              
-            // Display current state, and ON/OFF buttons for GPIO 27  
+            
             client.println("</TD> <TD> <CENTER> <p> <strong>" + nomRadio2 + "</strong> Estat Actual: " + radio2 + "</p> </CENTER>");
             client.println("<CENTER> <input type='image' src='https://upload.wikimedia.org/wikipedia/commons/f/fd/Logotip_de_RAC_1.jpg' width='128' height='128' /> </CENTER>");
-            // If the output27State is off, it displays the ON button       
+                 
             if (radio2=="off") {
               client.println("<CENTER><p><a href=\"/radio2/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio2/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             }
             
-            // Display current state, and ON/OFF buttons for GPIO 26  
+             
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio3 + "</strong> Estat Actual: " + radio3 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='https://enacast.com/media/cache/51/d5/51d5e463dc4d31bc8391bdbd8a148a59.jpg' /></CENTER>");
-            // If the output26State is off, it displays the ON button       
+                  
             if (radio3=="off") {
               client.println("<CENTER><p><a href=\"/radio3/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio3/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             } 
              
-            // Display current state, and ON/OFF buttons for GPIO 27  
+            
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio4 + "</strong> Estat Actual: " + radio4 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='http://images.radio.orange.com/radios/medium_cadena_ser.png' /></CENTER>");
-            // If the output27State is off, it displays the ON button       
+               
             if (radio4=="off") {
               client.println("<CENTER><p><a href=\"/radio4/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio4/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             }
-            // Display current state, and ON/OFF buttons for GPIO 26  
+            
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio5 + "</strong> Estat Actual: " + radio5 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAdVBMVEVPoxL////8/vtKoAtDnQLt9uf5/Pdjri1qsTZaqSGm0Yc9mgC/3ajo8+BOoxFHnweGwFy12Jzd7dGfzX7y+O6s04+SxmzM5Lp2t0ao0oq02JrE4K/Y68twtD+by3jJ47Z9u1Db7M6Nw2bT6MScy3rp9OKAvVR4BRhOAAADdElEQVR4nO2Y25abIBSGOakhKnjMwUSTic28/yMWEQXjtJ0s6epF93+RrOgf+NjAZitCIBAIBAKBQCAQCAQCgUAgEAgEel+UMfGe3W//bLev37FHZcOpv+4pygkO+HdDIGgd4jDyCIB6/A4AvSi7TwBWqwa/D8DKwe4RgEYhxt8HEDwY7B4B2GEY0bcBWKbtPgGa9wDKfw2w9w6QA8D/CiAopWINIOjKRZ1fvgAkozzaRZwyugCgjEfWRbVrp1xSd89QxL0ASNnW14qQMOjPbexsQxblVYrMXFC5O/cBwaT6aE5UIsnrNNzFHgDYqcdWyQ1PqZhlKiunk2t3IdbV3+P2iTHxAKBOU9WAaZvMfQQcyftw3QDILrS3h688VV8eAAS6Od1alEBVGMXwYwSQ+ZcuDwD0Zhojg2wPATfHjAaQzcpF/ACYRTyNCDtTMNYFeFiE5oRcuzYDyHZqK8gf2SGv5rYVQDJFgEaV6TfID8oVWJLNANME1JwN4jn+AoBNE9AYV+MrAnJnhnKIx81O43IFwCkfA4A74xJx5wlgXAEE17G9NHbrArDH6Mpt8W+y1fYIHPW/K+fgMSXhAmBMzpXTxxSUjQACPfXSStznGgM1Azw5vQ4pB9+k42IXfXMjwLi6Ce5cALP7LABCqXbtF67SD0Comz4smt6vAJ5fYHZeAPgYgXLRdPMKIArtqheusw8AYYJ7dGdXzfjLIpS9XgO969LXPOyCaSnZtuVplQfMqsCt42o95YFu3OFHOe1DIa5rgM/xUk/n3Sp7PwBTkse5HEfHxGWdiseZUkro6JI08ZQJpxWnJvgkVJIX98LWA85Z8MO4rnc0uE5Xb/XAHAKMi6RJCjzLjYBAM9eLy0M98Fie9GuAng4rc3l/XQ+kf+7qVwR7Ww86Fd8EYBKg4rQlkeMyAC/Z/D3J/XL8izVAdG2oCcjKRWwESCv/1M9vYpAF2BS8+iPNhhnXACpTZ2ZorC0WruAxHFr6uUC5uk2v6Rg/B/PQniWKo6uJAK6yuWWJutSukJrH/KYjoHJy2G0Y/yDBeNb0RVEc60+VChAV2e3I2fmj5NJ1oXt9/CiKvsk4o+pJ6Z5co7grztH215QqCahkKCQzHTKdGtUT49Kl7lOhPs1rVH1fUObtyRwEAoFAIBAIBAKBQCAQCAQCgUB/ST8BA7EvZSIMqe0AAAAASUVORK5CYII='/> </CENTER> ");
-            // If the output26State is off, it displays the ON button       
+                 
             if (radio5=="off") {
               client.println("<CENTER><p><a href=\"/radio5/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio5/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             } 
              
-            // Display current state, and ON/OFF buttons for GPIO 27  
+            
             client.println("</TD> </TR> <TR> <TD><CENTER></p> <strong>" + nomRadio6 + "</strong> Estat Actual: " + radio6 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='https://www.radio.es/images/broadcasts/e4/64/4228/1/c300.png' width='128' height='128' /></CENTER>");
-            // If the output27State is off, it displays the ON button       
+              
             if (radio6=="off") {
               client.println("<CENTER><p><a href=\"/radio6/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio6/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             }
             
-            // Display current state, and ON/OFF buttons for GPIO 26  
+          
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio7 + "</strong> Estat Actual: " + radio7 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='https://yt3.ggpht.com/ytc/AKedOLRoXrdC_lTEEdaBFwsIlJA3iwkGmvCDJjUjMSyw9A=s900-c-k-c0x00ffffff-no-rj' width='128' height='128' /></CENTER>");
-            // If the output26State is off, it displays the ON button       
+                 
             if (radio7=="off") {
               client.println("<CENTER><p><a href=\"/radio7/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio7/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             } 
              
-            // Display current state, and ON/OFF buttons for GPIO 27  
+             
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio8 + "</strong> Estat Actual: " + radio8 + "</p> </CENTER>");
             client.println("<CENTER><input type='image' src='https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/4c/ce/10732/1/c175.png' width='128' height='128' /></CENTER>");
-            // If the output27State is off, it displays the ON button       
+                  
             if (radio8=="off") {
               client.println("<CENTER><p><a href=\"/radio8/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio8/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             }
-            // Display current state, and ON/OFF buttons for GPIO 26  
+             
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio9 + "</strong> Estat Actual: " + radio9 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='https://static.mytuner.mobi/media/tvos_radios/WwgbG6g5tt.png' width='128' height='128' /></CENTER>");
-            // If the output26State is off, it displays the ON button       
+               
             if (radio9=="off") {
               client.println("<CENTER><p><a href=\"/radio9/on\"><button class=\"button\">ON</button></a></p></CENTER>");
             } else {
               client.println("<CENTER><p><a href=\"/radio9/off\"><button class=\"button button2\">OFF</button></a></p></CENTER>");
             } 
              
-            // Display current state, and ON/OFF buttons for GPIO 27  
+            
             client.println("</TD> <TD> <CENTER> </p> <strong>" + nomRadio10 + "</strong> Estat Actual: " + radio10 + "</p></CENTER>");
             client.println("<CENTER><input type='image' src='https://www.radio.es/images/broadcasts/8b/a9/118558/1/c300.png' width='128' height='128' /></CENTER>");
-            // If the output27State is off, it displays the ON button       
+             
             if (radio10=="off") {
               client.println("<CENTER><p><a href=\"/radio10/on\"><button class=\"button\">ON</button></a></p></CENTER> </TD> </TR> </TABLE>");
             } else {
