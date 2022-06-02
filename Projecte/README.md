@@ -548,6 +548,9 @@ Finalment s'esborra el contingut de la variable *header* i es desconnecta al cli
 
 En aspectes de connexions físiques, mitjançant cables femella-femella, es connecta el microprocessador al I2S. Al I2S se li connecta un adaptador d'entrada JACK on es pot connectar qualsevol dispositiu d'àudio JACK.
 
+## **Diagrama del circuit**
+![](Diagrama.jpeg)
+
 ## **Muntatge**
 ![](Muntatge.jpeg)
 
